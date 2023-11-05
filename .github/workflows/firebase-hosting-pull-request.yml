@@ -26,4 +26,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBER_VAL_CLOUD }}'
           projectId: cyber-val-cloud
-          channelId: 'pr-${{ github.event.number }}-${{ github.event.pull_request.head.ref }}'
+          channelId: '${{ github.event.number }}'
