@@ -103,7 +103,7 @@
     const heightCM = parseFloat(document.getElementById("height").value);
     const heightM = heightCM / 100; // Convert height to meters
     const bmi = calculateBMI(weight, heightM);
-    document.querySelector(".calculator p").textContent = `Your BMI is: ${bmi.toFixed(2)}`;
+    document.querySelector(".calculator p").textContent = `BMI is: ${bmi.toFixed(2)}`;
   });
 
   function calculateBMI(weight, height) {
