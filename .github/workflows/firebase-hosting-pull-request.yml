@@ -14,9 +14,8 @@ jobs:
           ref: master
 
       - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: w9jds/firebase-action@master
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBER_VAL_CLOUD }}'
-          projectId: cyber-val-cloud
-          channelId: 'pr-${{ github.event.number }}-${{ github.event.pull_request.head.ref }}'
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBER_VAL_CLOUD }}'
